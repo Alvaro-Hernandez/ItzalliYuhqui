@@ -26,6 +26,6 @@ GoalsItzaApp es una aplicacion movil para el control de metas a nivel personal y
 > Robert J. McKaine.
 
 > Asi que no pierdas la oportunidad
-> y construye tu propia vida con proposito..
+> y construye tu propia vida con proposito.
 
 
