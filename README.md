@@ -1,4 +1,4 @@
-# GoalsItzaApp
+# ItzalliYuhqui
 ## _Crea tus metas, ve por la siguiente._
 ## _Alvaro Hernandez_
 
@@ -6,7 +6,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-GoalsItzaApp es una aplicacion movil para el control de metas a nivel personal ya sea a corto o largo plazo tendras las funciones de un CRUD
+ItzalliYuhqui es una aplicacion movil para el control de metas a nivel personal ya sea a corto o largo plazo tendras las funciones de un CRUD
 
 - Crear una Meta❤️
 - Buscar una Meta🫡
