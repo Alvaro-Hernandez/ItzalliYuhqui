@@ -13,37 +13,82 @@ class Home extends StatelessWidget {
     return Scaffold(
         backgroundColor: tdBGColorB,
         appBar: _buildAppBar(),
-        body: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-          child: Column(
-            children: [
-              searchBox(),
-              Expanded(
-                child: ListView(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: 30,
-                        bottom: 20,
-                      ),
-                      child: Text(
-                        "¿Anotamos una meta? ✨",
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                          color: Color.fromARGB(255, 0, 0, 0),
+        body: Stack(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              child: Column(
+                children: [
+                  searchBox(),
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(
+                            top: 30,
+                            bottom: 20,
+                          ),
+                          child: Text(
+                            "¿Anotamos una meta? ✨",
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromARGB(255, 0, 0, 0),
+                            ),
+                          ),
                         ),
+                        for (Metas meta in metasList)
+                          MetasItem(
+                            metas: meta,
+                          ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Row(children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 20, right: 20, left: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                              color: tdCheck,
+                              offset: Offset(0.0, 0.0),
+                              blurRadius: 10.0,
+                              spreadRadius: 0.0),
+                        ],
+                        borderRadius: BorderRadius.circular(10)),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: '¡¡Que tal una nueva meta Itza!! ❤️',
+                        border: InputBorder.none,
                       ),
                     ),
-                    for (Metas meta in metasList)
-                      MetasItem(
-                        metas: meta,
-                      ),
-                  ],
+                  ),
                 ),
-              )
-            ],
-          ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 20, right: 20),
+                  child: ElevatedButton(
+                    child: Text(
+                      '+',
+                      style: TextStyle(fontSize: 40),
+                    ),
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        primary: tdBGColor,
+                        minimumSize: Size(60, 60),
+                        elevation: 10),
+                  ),
+                )
+              ]),
+            )
+          ],
         ));
   }
 
